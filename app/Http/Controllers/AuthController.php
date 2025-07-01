@@ -25,14 +25,12 @@ class AuthController extends Controller
                 return redirect()->route('dashboard');
             } else {
                 Auth::logout();
-                return redirect()->route('login')->withErrors(['role' => 'You dont have the required role']);
+                return redirect()->route('login')->with('error', 'You dont have any roles');
             }
 
         }
 
-        return back()->withErrors([
-            'email' => 'Email not found',
-        ]);
+        return back()->with('error', 'Login failed, please try again');
     }
 
     public function logout(Request $request){

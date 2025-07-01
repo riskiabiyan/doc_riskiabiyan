@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="{{asset("templates/vendors/feather/feather.css")}}">
   <link rel="stylesheet" href="{{asset("templates/vendors/ti-icons/css/themify-icons.css")}}">
   <link rel="stylesheet" href="{{asset("templates/vendors/css/vendor.bundle.base.css")}}">
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <link rel="stylesheet" href="{{asset("templates/vendors/datatables.net-bs4/dataTables.bootstrap4.css")}}">
@@ -170,6 +172,7 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
+          @include('parts.sweetAlert')
           @yield('content')
         </div>
         <!-- content-wrapper ends -->
